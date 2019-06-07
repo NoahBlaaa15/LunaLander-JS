@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Mondlandung</title>
+    <style>
+        body {
+            background: white;
+            font-family: Cambria;
+            font-weight: bold;
+            color: black;
+            text-shadow: 2px 2px 2px #A1C4D4;
+        }
+        .anzeige {
+            font-size: 18px;
+            width: 250px;
+            border: 1px black solid;
+            padding: 10px;
+            margin: 25px;
+            float: left;
+        }
+        .hintergrundmond {
+            background-image:linear-gradient(0deg, #f5deb3 5%, #6495ed 50%)
+        }
+    </style>
+</head>
+<body>
+    <button id="starter" onclick="window.addEventListener('keydown', keyDownEvent);document.getElementById('starter').style.visibility = 'hidden'; mainFrameProcessor();">Start</button>
+    <button id="restarter" style="visibility: hidden" onclick="document.getElementById('restarter').style.visibility = 'hidden'; ">Restart</button>
+    <p id="display" class="anzeige"></p>
+    <canvas id="mond" class="hintergrundmond" width="500" height="530">
+        Fallback-Inhalt
+    </canvas>
+    <script src="lunaEngine.js"></script>
+</body>
+</html>
