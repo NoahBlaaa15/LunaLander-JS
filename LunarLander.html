@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Mondlandung</title>
+    <link rel="stylesheet" href="lunarStyle.css" >
     <style>
         body {
             background: white;
@@ -25,12 +26,16 @@
     </style>
 </head>
 <body>
-    <button id="starter" onclick="window.addEventListener('keydown', keyDownEvent);document.getElementById('starter').style.visibility = 'hidden'; mainFrameProcessor();">Start</button>
-    <button id="restarter" style="visibility: hidden" onclick="document.getElementById('restarter').style.visibility = 'hidden'; ">Restart</button>
-    <p id="display" class="anzeige"></p>
-    <canvas id="mond" class="hintergrundmond" width="500" height="530">
+    <canvas id="mond" class="hintergrundmond" >
         Fallback-Inhalt
     </canvas>
-    <script src="lunaEngine.js"></script>
+    <script src="lunarEngine.js"></script>
+    <script>
+        window.addEventListener("keydown", keyDownEvent);
+        hintergrund.width = window.innerWidth;
+        hintergrund.height = window.innerHeight;
+        height = window.innerHeight - window.innerHeight/50;
+        setTimeout(mainFrameProcessor, 500);
+    </script>
 </body>
 </html>
